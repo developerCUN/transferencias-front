@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main>
+    <custom-header/>
+    <sites-panel/>
+    <hr/>
+    <router-view class="container"/>
+    <hr/>
+    <custom-footer/>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CustomHeader from '@/components/CustomHeader'
+import SitesPanel from '@/components/SitesPanel'
+import CustomFooter from '@/components/CustomFooter'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CustomHeader,
+    SitesPanel,
+    CustomFooter
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+      background-color: var(--back-color);
+      margin: unset;
+      font-family: 'FontAwesome';
+      overflow-x: hidden;
+      overflow-y: auto;
+  }
 </style>
